@@ -5,7 +5,17 @@
     <title>vue_demo</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h1>
+        {{ greeting }}
+      </h1>
+      <input v-model="greeting">
+      <div v-if="count === 0">
+        Green
+      </div>
+      <button onclick="alert('signed ip')" v-bind:disabled="greeting.length < 3"> To jest button
+      </button>
+    </div>
     <script src="/dist/build.js"></script>
   </body>
 </html>
